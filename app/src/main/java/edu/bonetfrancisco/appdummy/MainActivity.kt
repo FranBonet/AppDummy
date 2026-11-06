@@ -17,13 +17,12 @@ class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
+
         setContent {
             AppDummyTheme {
-                Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                    PantallaBienvenida(
-                        onEntrar = { }
-                    )
-                }
+                PantallaBienvenida(
+                    onEntrar = { }
+                )
             }
         }
     }
