@@ -52,7 +52,7 @@ dependencies {
     debugImplementation(libs.androidx.compose.ui.test.manifest)
     debugImplementation(libs.androidx.compose.ui.tooling)
     // Material Icons Extended
-    implementation("androidx.compose.material:material-icons-extended:1.7.8")
+    implementation(libs.androidx.compose.material.icons.extended)
     // Coil para la carga de imágenes
     //implementation("io.coil-kt.coil3:coil-compose:3.5.0")
     //implementation("io.coil-kt.coil3:coil-network-okhttp:3.5.0")
