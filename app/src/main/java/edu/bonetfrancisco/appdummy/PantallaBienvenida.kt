@@ -20,7 +20,8 @@ fun PantallaBienvenida(
     modifier: Modifier = Modifier
 ) {
     var nombreUsuario by rememberSaveable { mutableStateOf("") }
-    val botonHabilitado = nombreUsuario.trim().length >= 3
+    val nombreRecortado = nombreUsuario.trim()
+    val botonHabilitado = nombreRecortado.length >= 3
 
     Scaffold(
         modifier = modifier.fillMaxSize(),
@@ -71,7 +72,7 @@ fun PantallaBienvenida(
                 singleLine = true,
                 modifier = Modifier.fillMaxWidth(),
                 supportingText = {
-                    Text("Mínimo 3 caracteres (${nombreUsuario.length}/3)")
+                    Text("Mínimo 3 caracteres (${nombreRecortado.length}/3)")
                 }
             )
 
@@ -88,7 +89,7 @@ fun PantallaBienvenida(
             ) {
                 Text(
                     text = if (botonHabilitado) {
-                        "Entrar como ${nombreUsuario.trim()}"
+                        "Entrar como $nombreRecortado"
                     } else {
                         "Entrar"
                     },
